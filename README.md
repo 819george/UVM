@@ -21,6 +21,7 @@ field_automation不用自己寫copy、compare、print
 is_active == UVM_ACTIVE: input agent， UVM_PASSIVE: output agent
 
 6. env: i_agt、o_agt、mdl、scb
-7. refernce model:複製i_agt的tr， 傳遞給scb
-問題
+7. refernce model:複製i_agt的tr， 傳遞給scb  
+
+- 問題  
 connet phase下到上:mdl、scb建立ap、blocking_get_port act_port之後，在env用fifo連接
