@@ -1,12 +1,14 @@
 # UVM
 
-[example code](https://github.com/819george/UVM/tree/main/2.5.2)
+[example code 2.5.2](https://github.com/819george/UVM/tree/main/2.5.2)
 
-- structrue
+- structrue  
 <img src="https://github.com/819george/UVM/blob/main/images/UVM.png" width="500" height="300"/>
-- env
+
+- env  
 <img src="https://github.com/819george/UVM/blob/main/images/UVM_sequence.png" width="500" height="300"/>
-- sequence_item_flow
+
+- sequence_item_flow  
 <img src="https://github.com/819george/UVM/blob/main/images/sequence_item_flow.png" width="400" height="500"/>
 
 1. DUT：rxd接收，再通過txd發送
