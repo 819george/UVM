@@ -1,15 +1,15 @@
 # UVM
 
-[example code 2.5.2](https://github.com/819george/UVM/tree/main/2.5.2)
+example code [2.5.2](https://github.com/819george/UVM/tree/main/2.5.2)
 
 - structrue  
-<img src="https://github.com/819george/UVM/blob/main/images/UVM.png" width="500" height="300"/>
+<img src="https://github.com/819george/UVM/blob/main/images/UVM.png" width="350" height="210"/>
 
 - env  
-<img src="https://github.com/819george/UVM/blob/main/images/UVM_sequence.png" width="500" height="300"/>
+<img src="https://github.com/819george/UVM/blob/main/images/UVM_sequence.png" width="350" height="210"/>
 
 - sequence_item_flow  
-<img src="https://github.com/819george/UVM/blob/main/images/sequence_item_flow.png" width="400" height="500"/>
+<img src="https://github.com/819george/UVM/blob/main/images/sequence_item_flow.png" width="240" height="270"/>
 
 1. DUT：rxd接收，再通過txd發送
 2. Driver：送一個封包
