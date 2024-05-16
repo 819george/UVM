@@ -30,10 +30,14 @@ is_active == UVM_ACTIVE: input agent， UVM_PASSIVE: output agent
     - connet phase 下到上:
       - 在 env 用 fifo 連接，因為 ap 為非阻塞需暫存
 8. scoreboard: 比較 model 和 o_agt's monitor 的資料
-  - TLM (類似 monitor & model)
+  - TLM (類似 monitor & model)  
     - model (ap) & scoreboard (exp_port)
     - o_agt's monitor (ap) & scoreboard (act_port)
 9. sequence: 創建 my_transaction 實例，在 body 中用 uvm_do 隨機化、傳給 squencer  
 mycaseN 方便切換，在 agt 使用內建的端口連接  
   - uvm_driver: seq_item_port
   - uvm_sequencer: seq_item_export
+10. TLM  
+priority: PORT、EXPORT、IMP 高的可以連接低的  
+action: put、get、transport 可以做不同動作  
+    
