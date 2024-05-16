@@ -22,12 +22,18 @@ unpack_bytes 只收動態數組
 5. agent: 包含 drv、sqr、mon  
 is_active == UVM_ACTIVE: input agent， UVM_PASSIVE: output agent  
 6. env: i_agt、o_agt、mdl、scb
-7. refernce model: 複製 i_agt 的 transaction， 傳遞給 scb
+7. refernce model: 複製 i_agt 的 transaction，傳遞給 scb
   - TLM (monitor & model)
-    - build phase: 
-      - monitor: analysis_port (ap)
+    - build phase 上到下: 
+      - i_agt's monitor: analysis_port (ap)
       - model: blocking_get_port (act_port)，
     - connet phase 下到上:
-      - 在 env 用 fifo 連接，因為 ap 非阻塞要暫存
-8. scoreboard:
-9. mycase0、mycase1: 方便切換不同的 sequence
+      - 在 env 用 fifo 連接，因為 ap 為非阻塞需暫存
+8. scoreboard: 比較 model 和 o_agt's monitor 的資料
+  - TLM (類似 monitor & model)
+    - model (ap) & scoreboard (exp_port)
+    - o_agt's monitor (ap) & scoreboard (act_port)
+9. sequence: 創建 my_transaction 實例，在 body 中用 uvm_do 隨機化、傳給 squencer  
+mycaseN 方便切換，在 agt 使用內建的端口連接  
+  - uvm_driver: seq_item_port
+  - uvm_sequencer: seq_item_export
